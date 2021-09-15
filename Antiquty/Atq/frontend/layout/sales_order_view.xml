@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="osc.additional.content" template="Antiquty_Atq::order/additional.phtml" after="-">
+                <block class="Antiquty\Atq\Block\Order\View\CustomField" name="custom_field" template="Antiquty_Atq::order/view/custom-field.phtml"/>
+                <block class="Antiquty\Atq\Block\Order\View\Comment" name="comment" template="order/view/comment.phtml"/>
+                <block class="Antiquty\Atq\Block\Order\View\Survey" name="survey" template="order/view/survey.phtml"/>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="order_totals">
+            <block class="Antiquty\Atq\Block\Order\Totals" name="creditmemo.osc.totals"/>
+        </referenceBlock>
+    </body>
+</page>

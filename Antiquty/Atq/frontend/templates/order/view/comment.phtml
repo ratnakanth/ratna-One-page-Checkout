@@ -1,0 +1,15 @@
+<?php
+
+
+/** @var \Antiquty\Atq\Block\Order\View\Comment $block */
+
+if ($commentHtml = $block->getOrderComment()) : ?>
+    <div class="box box-order-comment">
+        <strong class="box-title">
+            <span><?= $block->escapeHtml(__('Order Comment')) ?></span>
+        </strong>
+        <div class="box-content">
+            <?= $block->escapeHtml($commentHtml) ?>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,17 @@
+<?php
+
+/** @var \Antiquty\Atq\Block\Checkout\CompatibleConfig $block */
+
+if ($block->isEnableModulePostNL()) : ?>
+    <script type="text/javascript">
+        require.config({
+            config: {
+                mixins: {
+                    'Antiquty_Atq/js/view/shipping': {
+                        'Antiquty_Atq/js/view/shipping-postnl': true
+                    }
+                }
+            }
+        })
+    </script>
+<?php endif; ?>

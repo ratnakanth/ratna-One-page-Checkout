@@ -1,0 +1,30 @@
+<?php
+
+
+/** @var \Antiquty\Atq\Block\Order\View\CustomField $block */
+$data = $block->getAddressData();
+
+if (empty($data)) {
+    return;
+}
+?>
+
+<?php foreach ($data as $address) : ?>
+    <div class="box">
+        <strong class="box-title"><span><?= $block->escapeHtml($address['label']) ?></span></strong>
+        <div class="box-content">
+            <?php foreach ((array) $address['value'] as $field) : ?>
+                <div>
+                    <strong><?= $block->escapeHtml($field['label']) ?>:&nbsp;</strong>
+                    <span><?= $block->escapeHtml($field['value']) ?></span>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<style type="text/css">
+    .block-order-additional-view .box-title {
+        font-weight: 600;
+    }
+</style>

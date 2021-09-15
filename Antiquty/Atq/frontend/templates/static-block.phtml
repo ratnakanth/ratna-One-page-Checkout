@@ -1,0 +1,8 @@
+<?php
+
+
+/** @var \Antiquty\Atq\Block\StaticBlock $block */
+$blockArray = $block->getStaticBlock();
+foreach ($blockArray as $item) : ?>
+    <div class="osc-cms-block"><?= /** @noEscape */ $item['content'] ?></div>
+<?php endforeach ?>
